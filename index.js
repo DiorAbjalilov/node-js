@@ -42,12 +42,24 @@ fs.writeFile(
       (err) => {
         if (err) throw err;
 
-        console.log("Acsses");
+        console.log("Documend chanched");
+        fs.readFile(
+          path.join(__dirname, "modules", "nodejs.txt"),
+          (err, data) => {
+            if (err) throw err;
+            console.log(data);
+          }
+        );
       }
     );
   }
 );
-fs.readFile(path.join(__dirname, "modules", "nodejs.txt"), (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
+
+fs.rename(
+  path.join(__dirname, "modules", "nodejs.txt"),
+  path.join(__dirname, "modules", "node.txt"),
+  (err) => {
+    if (err) throw err;
+    console.log("Name change");
+  }
+);
