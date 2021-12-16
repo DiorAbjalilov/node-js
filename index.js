@@ -12,6 +12,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const data = require("./data");
 
 // fs.mkdir(path.join(__dirname, "modules"), (err) => {
 //   if (err) throw err;
@@ -46,3 +47,7 @@ fs.writeFile(
     );
   }
 );
+fs.readFile(path.join(__dirname, "modules", "nodejs.txt"), (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
