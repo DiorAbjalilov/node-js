@@ -35,5 +35,14 @@ fs.writeFile(
     if (err) throw console.log(err);
 
     console.log("Wirite file acses");
+    fs.appendFile(
+      path.join(__dirname, "modules", "nodejs.txt"),
+      " by Diyor Abjalilov",
+      (err) => {
+        if (err) throw err;
+
+        console.log("Acsses");
+      }
+    );
   }
 );
