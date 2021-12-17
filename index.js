@@ -79,3 +79,5 @@ mers.on("message", (data) => {
 });
 
 mers.log("Hello world");
+mers.log("Mers");
+mers.log("BMW");
