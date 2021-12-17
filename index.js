@@ -63,3 +63,19 @@
 //     console.log("Name change");
 //   }
 // );
+
+const event = require("events");
+
+class Car extends event {
+  log(message) {
+    this.emit("message", `${message}, id: ${Date.now()}`);
+  }
+}
+
+const mers = new Car();
+
+mers.on("message", (data) => {
+  console.log(data);
+});
+
+mers.log("Hello world");
