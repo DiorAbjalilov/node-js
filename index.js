@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
   // req = server so'rov
   // res = server javob
   res.write("<h1>Hello world Node js</h1>");
-  res.write("<h1>Hello world js</h1>");
+  res.write("<h1>Hello world JavaScript</h1>");
   res.write("<h1>Hello world React js</h1>");
   res.end();
 });
