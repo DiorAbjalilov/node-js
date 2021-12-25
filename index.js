@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-type": "text/json" });
       const cars = [
         { name: "Mers", color: "Oq" },
-        { name: "BMW", color: "White" },
+        { name: "BMW", color: "oq" },
       ];
       res.end(JSON.stringify(cars));
     }
